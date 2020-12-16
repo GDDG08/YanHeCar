@@ -17,8 +17,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -68,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         EventBus.getDefault().register(this);
@@ -98,6 +104,40 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.button).setOnTouchListener(
+                new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View view, MotionEvent motionEvent) {
+                        if(motionEvent.getAction()==MotionEvent.ACTION_UP){
+//                            Toast.makeText(MainActivity.this,"还好松开了",Toast.LENGTH_SHORT).show();
+                            sendText("@");
+
+                        }else if(motionEvent.getAction()==MotionEvent.ACTION_DOWN){
+//                            Toast.makeText(MainActivity.this,"点我干啥",Toast.LENGTH_SHORT).show();
+                            sendText("!");
+                        }
+                        return false;
+                    }
+                }
+        );
+
+        SeekBar seekbar = findViewById(R.id.seekBar);
+        seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                sendText(i+"");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
 
         findViewById(R.id.ctrl_1).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -135,17 +175,21 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void callback(int eventType, int currentAngle, float currentDistance) {
+
                     switch (eventType) {
                         case RockerView.EVENT_ACTION:
                             // 触摸事件回调
 //                            Log.e("EVENT_ACTION-------->", "angle="+currentAngle+" - distance"+currentDistance);
-                            Car(currentAngle,currentDistance);
+                            if (currentAngle == -1)
+                                sendText("Z");
+                            else
+                                    Car(currentAngle,currentDistance);
                             break;
                         case RockerView.EVENT_CLOCK:
                             // 定时回调
 //                            Log.e("EVENT_CLOCK", "angle="+currentAngle+" - distance"+currentDistance);
-                            if (currentDistance == 0)
-                                sendText("Z");
+                            //if (currentDistance == 0)
+                                //sendText("Z");
                             break;
                     }
                 }
@@ -160,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
         int disClass, angClass = (ang + 15) / 30;
         if (dis < 30)
             disClass = 0;
-        else if (dis < 150)
+        else if (dis < 200)
             disClass = 1;
         else disClass = 2;
         if (disClass == 0)

@@ -25,115 +25,135 @@
                 android:id="@+id/text_into_disconnect"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:text="断开连接" />
         </FrameLayout>
 
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-            <LinearLayout
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
-                <android.support.constraint.ConstraintLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/text_into_scan">
+                    android:orientation="vertical">
 
                     <LinearLayout
-                        android:id="@+id/ctrl_1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="20dp"
-                        android:background="@drawable/bg_ctrl"
-                        app:layout_constraintBottom_toTopOf="@+id/ctrl_3"
-                        app:layout_constraintEnd_toStartOf="@id/ctrl_2"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="clip_horizontal"
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="match_parent"
+                        <LinearLayout
+                            android:layout_width="260dp"
                             android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="控制1" />
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/button"
+                                android:layout_width="match_parent"
+                                android:layout_height="158dp"
+                                android:layout_weight="2"
+                                android:text="Fire!!!" />
+
+                            <SeekBar
+                                android:id="@+id/seekBar"
+                                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:max="9"
+                                android:progress="5"
+                                android:rotation="90"
+                                android:scrollbarSize="30dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ctrl_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:background="@drawable/bg_ctrl">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="控制1" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ctrl_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:background="@drawable/bg_ctrl">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="控制2" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ctrl_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:background="@drawable/bg_ctrl">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="控制3" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ctrl_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:background="@drawable/bg_ctrl">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="控制4" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <com.gcssloop.widget.RockerView
+                            android:id="@+id/rocker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            rocker:area_background="@drawable/area_bg"
+                            rocker:area_radius="120dp"
+                            rocker:refresh_cycle="8"
+                            rocker:rocker_background="@drawable/rocker_bg"
+                            rocker:rocker_radius="40dp" />
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:id="@+id/ctrl_2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="20dp"
-                        android:background="@drawable/bg_ctrl"
-                        app:layout_constraintBottom_toTopOf="@id/ctrl_4"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/ctrl_1"
-                        app:layout_constraintTop_toTopOf="parent">
+                </LinearLayout>
+            </ScrollView>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="控制2" />
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:id="@+id/ctrl_3"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="20dp"
-                        android:background="@drawable/bg_ctrl"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/ctrl_4"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/ctrl_1">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="控制3" />
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:id="@+id/ctrl_4"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="20dp"
-                        android:background="@drawable/bg_ctrl"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/ctrl_3"
-                        app:layout_constraintTop_toBottomOf="@id/ctrl_2">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="控制4" />
-                    </LinearLayout>
-
-                </android.support.constraint.ConstraintLayout>
-
-                <com.gcssloop.widget.RockerView
-                    android:id="@+id/rocker"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    rocker:area_background="@drawable/area_bg"
-                    rocker:area_radius="120dp"
-                    rocker:refresh_cycle="8"
-                    rocker:rocker_background="@drawable/rocker_bg"
-                    rocker:rocker_radius="40dp" />
-
-            </LinearLayout>
-        </ScrollView>
-
+        </LinearLayout>
     </LinearLayout>
 
 
