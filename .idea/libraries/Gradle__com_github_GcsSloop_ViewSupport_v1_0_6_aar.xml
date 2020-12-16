@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.GcsSloop:ViewSupport:v1.0.6@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ViewSupport-v1.0.6.aar/9552f06e334cb091e1e361d9508cd911/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ViewSupport-v1.0.6.aar/9552f06e334cb091e1e361d9508cd911/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ViewSupport-v1.0.6.aar/9552f06e334cb091e1e361d9508cd911/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

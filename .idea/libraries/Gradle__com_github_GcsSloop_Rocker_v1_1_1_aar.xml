@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.GcsSloop:Rocker:v1.1.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/Rocker-v1.1.1.aar/88bc3615ad08f9a23bb21ffebe2aa55b/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/Rocker-v1.1.1.aar/88bc3615ad08f9a23bb21ffebe2aa55b/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/Rocker-v1.1.1.aar/88bc3615ad08f9a23bb21ffebe2aa55b/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

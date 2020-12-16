@@ -16,10 +16,13 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.gcssloop.widget.RockerView;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -99,21 +102,23 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.ctrl_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sendText("31");
+                sendText("Z");
+                Toast.makeText(MainActivity.this, "M", Toast.LENGTH_SHORT).show();
+
             }
         });
 
         findViewById(R.id.ctrl_2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sendText("34");
+                sendText("C");
             }
         });
 
         findViewById(R.id.ctrl_3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sendText("37");
+                sendText("@");
             }
         });
 
@@ -124,8 +129,49 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
+        RockerView rocker = (RockerView) findViewById(R.id.rocker);
+        if (null != rocker){
+            rocker.setListener(new RockerView.RockerListener() {
 
+                @Override
+                public void callback(int eventType, int currentAngle, float currentDistance) {
+                    switch (eventType) {
+                        case RockerView.EVENT_ACTION:
+                            // 触摸事件回调
+//                            Log.e("EVENT_ACTION-------->", "angle="+currentAngle+" - distance"+currentDistance);
+                            Car(currentAngle,currentDistance);
+                            break;
+                        case RockerView.EVENT_CLOCK:
+                            // 定时回调
+//                            Log.e("EVENT_CLOCK", "angle="+currentAngle+" - distance"+currentDistance);
+                            if (currentDistance == 0)
+                                sendText("Z");
+                            break;
+                    }
+                }
+            });
+        }
+
+
+    }
+    private void Car (int ang, float dis){
+        char[] list = {'S','U','W','A','C','E','G','I','K','M','O','Q'};
+
+        int disClass, angClass = (ang + 15) / 30;
+        if (dis < 30)
+            disClass = 0;
+        else if (dis < 150)
+            disClass = 1;
+        else disClass = 2;
+        if (disClass == 0)
+            sendText("Z");
+        else {
+            char buffer = list[angClass];
+            if (disClass==2)
+                buffer++;
+            sendText(buffer+"");
+        }
+    }
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -146,12 +192,19 @@ public class MainActivity extends AppCompatActivity {
         mConnectedThread.start();
     }
 
+    private String last;
     private void sendText(String sendStr) {
-        if (isConnect || getConnectBt()) {
-            send(sendStr);
-        } else {
-            Toast.makeText(this, "未连接设备", Toast.LENGTH_SHORT).show();
+        if (!sendStr.equals(last)){
+            Log.e("SEND------->", sendStr);
+            if (isConnect || getConnectBt()) {
+                last = sendStr;
+                send(sendStr);
+            } else {
+//                last = sendStr;
+//                Toast.makeText(this, "未连接设备", Toast.LENGTH_SHORT).show();
+            }
         }
+
     }
 
 
