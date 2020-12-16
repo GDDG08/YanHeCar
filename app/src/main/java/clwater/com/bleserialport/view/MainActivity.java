@@ -21,6 +21,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -108,18 +109,20 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnTouchListener() {
                     @Override
                     public boolean onTouch(View view, MotionEvent motionEvent) {
-                        if(motionEvent.getAction()==MotionEvent.ACTION_UP){
-//                            Toast.makeText(MainActivity.this,"还好松开了",Toast.LENGTH_SHORT).show();
-                            sendText("@");
-
-                        }else if(motionEvent.getAction()==MotionEvent.ACTION_DOWN){
-//                            Toast.makeText(MainActivity.this,"点我干啥",Toast.LENGTH_SHORT).show();
-                            sendText("!");
+                        switch (motionEvent.getAction()){
+                            case  MotionEvent.ACTION_CANCEL:
+                            case  MotionEvent.ACTION_UP:
+                                sendText("!");
+                                break;
+                            case MotionEvent.ACTION_DOWN:
+                                sendText("@");
+                                break;
                         }
                         return false;
                     }
                 }
         );
+
 
         SeekBar seekbar = findViewById(R.id.seekBar);
         seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {

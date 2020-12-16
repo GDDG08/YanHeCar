@@ -63,16 +63,23 @@
                                 android:layout_weight="2"
                                 android:text="Fire!!!" />
 
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                rocker:srcCompat="@android:drawable/ic_delete" />
+
                             <SeekBar
                                 android:id="@+id/seekBar"
                                 style="@style/Widget.AppCompat.SeekBar.Discrete"
-                                android:layout_width="match_parent"
+                                android:layout_width="256dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="2"
                                 android:max="9"
                                 android:progress="5"
                                 android:rotation="90"
-                                android:scrollbarSize="30dp" />
+                                android:scrollbarSize="10dp" />
                         </LinearLayout>
 
                         <LinearLayout
