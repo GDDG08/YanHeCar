@@ -292,6 +292,8 @@ public class MainActivity extends AppCompatActivity {
                     new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, RESULT_CODE_SCAN);
         } else {
             startActivity(new Intent(MainActivity.this, BleScanListActivity.class));
+
+
         }
     }
 

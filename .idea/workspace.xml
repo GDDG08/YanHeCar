@@ -11,7 +11,22 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0eb2dfd-0772-4b07-89e3-b1d44e239698" name="Default Changelist" comment="">
+    <list default="true" id="d0eb2dfd-0772-4b07-89e3-b1d44e239698" name="Default Changelist" comment="2.0--layout redesigned">
+      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/BleScanListActivity$1$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/BleScanListActivity$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/BleScanListActivity$BleBroadcastReceiver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/BleScanListActivity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$10.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$9.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterDir="false" />
@@ -20,11 +35,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/clwater/com/bleserialport/view/BleScanListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/clwater/com/bleserialport/view/BleScanListActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/clwater/com/bleserialport/view/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/clwater/com/bleserialport/view/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <list id="5a3f801c-df32-40bd-8bc4-4d44055550fd" name="Default Changelist2" comment="">
       <change afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/clwater/com/bleserialport/BuildConfig.java" afterDir="false" />
@@ -371,21 +385,6 @@
       <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/utils/BleConnectUtils.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/utils/BluetoothUtils.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/utils/ConnectedThread.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/BleScanListActivity$1$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/BleScanListActivity$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/BleScanListActivity$BleBroadcastReceiver.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/BleScanListActivity.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$10.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$6.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$7.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$8.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity$9.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/MainActivity.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/adapter/ScanAdapter.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/clwater/com/bleserialport/view/adapter/SimpleAdapter.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/chad/library/R$dimen.class" afterDir="false" />
@@ -1513,7 +1512,7 @@
   <component name="PropertiesComponent">
     <property name="ApkExportedModule" value="app" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="9daewscuvkfuuwcu" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-12-16T07:13:21.886Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-12-18T12:31:45.896Z" />
     <property name="ExportApk.ApkPath" value="D:\@Projects\AndroidStudio\BleSerialPort\app" />
     <property name="ExportApk.BuildVariants" value="release" />
     <property name="ExportApk.SignV2" value="true" />
@@ -1623,14 +1622,22 @@
       <option name="project" value="LOCAL" />
       <updated>1608139394814</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="2.0--layout redesigned">
+      <created>1608278242363</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608278242363</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Version" />
     <MESSAGE value="1.0--release" />
     <MESSAGE value="1.5--bugfixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.5--bugfixed" />
+    <MESSAGE value="2.0--layout redesigned" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.0--layout redesigned" />
   </component>
   <component name="WindowStateProjectService">
     <state x="193" y="138" key="#PSD" timestamp="1608106334372">
@@ -1641,30 +1648,34 @@
       <screen x="0" y="0" width="1350" height="812" />
     </state>
     <state x="431" y="267" width="492" height="284" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1350.812@0.0.1350.812" timestamp="1608106582923" />
-    <state x="185" y="1" key="CommitChangelistDialog2" timestamp="1608278206186">
+    <state x="185" y="1" key="CommitChangelistDialog2" timestamp="1608281053296">
       <screen x="0" y="0" width="1350" height="812" />
     </state>
-    <state x="185" y="1" key="CommitChangelistDialog2/0.0.1350.812@0.0.1350.812" timestamp="1608278206186" />
+    <state x="185" y="1" key="CommitChangelistDialog2/0.0.1350.812@0.0.1350.812" timestamp="1608281053296" />
+    <state x="46" y="63" key="DiffContextDialog" timestamp="1608281052250">
+      <screen x="0" y="0" width="1350" height="812" />
+    </state>
+    <state x="46" y="63" key="DiffContextDialog/0.0.1350.812@0.0.1350.812" timestamp="1608281052250" />
     <state x="455" y="134" key="FileChooserDialogImpl" timestamp="1608135528592">
       <screen x="0" y="0" width="1350" height="812" />
     </state>
     <state x="455" y="134" key="FileChooserDialogImpl/0.0.1350.812@0.0.1350.812" timestamp="1608135528592" />
-    <state width="1024" height="24" key="GridCell.Tab.0.bottom" timestamp="1608278206261">
+    <state width="1149" height="141" key="GridCell.Tab.0.bottom" timestamp="1608294749012">
       <screen x="0" y="0" width="1350" height="812" />
     </state>
-    <state width="1024" height="24" key="GridCell.Tab.0.bottom/0.0.1350.812@0.0.1350.812" timestamp="1608278206261" />
-    <state width="1024" height="24" key="GridCell.Tab.0.center" timestamp="1608278206256">
+    <state width="1149" height="141" key="GridCell.Tab.0.bottom/0.0.1350.812@0.0.1350.812" timestamp="1608294749012" />
+    <state width="1149" height="141" key="GridCell.Tab.0.center" timestamp="1608294749012">
       <screen x="0" y="0" width="1350" height="812" />
     </state>
-    <state width="1024" height="24" key="GridCell.Tab.0.center/0.0.1350.812@0.0.1350.812" timestamp="1608278206256" />
-    <state width="1024" height="24" key="GridCell.Tab.0.left" timestamp="1608278206256">
+    <state width="1149" height="141" key="GridCell.Tab.0.center/0.0.1350.812@0.0.1350.812" timestamp="1608294749012" />
+    <state width="1149" height="141" key="GridCell.Tab.0.left" timestamp="1608294749012">
       <screen x="0" y="0" width="1350" height="812" />
     </state>
-    <state width="1024" height="24" key="GridCell.Tab.0.left/0.0.1350.812@0.0.1350.812" timestamp="1608278206256" />
-    <state width="1024" height="24" key="GridCell.Tab.0.right" timestamp="1608278206256">
+    <state width="1149" height="141" key="GridCell.Tab.0.left/0.0.1350.812@0.0.1350.812" timestamp="1608294749012" />
+    <state width="1149" height="141" key="GridCell.Tab.0.right" timestamp="1608294749012">
       <screen x="0" y="0" width="1350" height="812" />
     </state>
-    <state width="1024" height="24" key="GridCell.Tab.0.right/0.0.1350.812@0.0.1350.812" timestamp="1608278206256" />
+    <state width="1149" height="141" key="GridCell.Tab.0.right/0.0.1350.812@0.0.1350.812" timestamp="1608294749012" />
     <state x="207" y="49" key="SettingsEditor" timestamp="1608137697124">
       <screen x="0" y="0" width="1350" height="812" />
     </state>
@@ -1673,10 +1684,10 @@
       <screen x="0" y="0" width="1350" height="812" />
     </state>
     <state x="524" y="323" key="VCS.ChangelistChooser/0.0.1350.812@0.0.1350.812" timestamp="1608139355872" />
-    <state x="268" y="139" key="Vcs.Push.Dialog.v2" timestamp="1608136007761">
+    <state x="268" y="139" key="Vcs.Push.Dialog.v2" timestamp="1608278343891">
       <screen x="0" y="0" width="1350" height="812" />
     </state>
-    <state x="268" y="139" key="Vcs.Push.Dialog.v2/0.0.1350.812@0.0.1350.812" timestamp="1608136007761" />
+    <state x="268" y="139" key="Vcs.Push.Dialog.v2/0.0.1350.812@0.0.1350.812" timestamp="1608278343891" />
     <state x="474" y="184" key="chooseDestDirectoryDialog" timestamp="1608101120915">
       <screen x="0" y="0" width="1350" height="812" />
     </state>

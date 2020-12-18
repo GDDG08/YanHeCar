@@ -12,6 +12,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -58,7 +59,7 @@ public class BleScanListActivity extends AppCompatActivity {
 
     private void initBle() {
         bleBroadcastReceiver = new BleBroadcastReceiver();
-        initReceiver();
+        //initReceiver();
         mBluetoothAdapter.startDiscovery();
     }
 
@@ -67,7 +68,7 @@ public class BleScanListActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         EventBus.getDefault().unregister(this);
-        unregisterReceiver(bleBroadcastReceiver);
+//        unregisterReceiver(bleBroadcastReceiver);
         if (mBluetoothAdapter.isDiscovering()) {
             mBluetoothAdapter.cancelDiscovery();
         }
@@ -108,7 +109,7 @@ public class BleScanListActivity extends AppCompatActivity {
         recyclerView.setAdapter(mScanAdapter);
         relativeLayout = findViewById(R.id.progress_all);
 
-
+//!!!!!!!!
         mScanAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
@@ -133,6 +134,9 @@ public class BleScanListActivity extends AppCompatActivity {
 
             if (BluetoothDevice.ACTION_FOUND.equals(action)) {
                 BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+//                String a = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+//                Toast.makeText(getApplicationContext(),a,Toast.LENGTH_SHORT);
+//                Log.e("DeT",a);
                 if (device != null) {
                     Device temp = new Device();
                     temp.bluetoothDevice = device;
