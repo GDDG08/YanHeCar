@@ -9,156 +9,138 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/text_into_scan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="连接设备" />
-
-            <Button
-                android:id="@+id/text_into_disconnect"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:text="断开连接" />
-        </FrameLayout>
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="284dp"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_marginBottom="10dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
 
-            <ScrollView
+            <Button
+                android:id="@+id/button"
+                android:layout_width="296dp"
+                android:layout_height="219dp"
+                android:layout_weight="2"
+                android:text="Fire!!!" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="296dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="2"
+                android:max="9"
+                android:progress="5"
+                android:rotation="90"
+                android:scrollbarSize="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <Button
+                    android:id="@+id/text_into_scan"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="连接设备" />
+
+                <Button
+                    android:id="@+id/text_into_disconnect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="断开连接" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="clip_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:orientation="vertical">
 
                     <LinearLayout
+                        android:id="@+id/ctrl_1"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="clip_horizontal"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/bg_ctrl">
 
-                        <LinearLayout
-                            android:layout_width="260dp"
+                        <TextView
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_gravity="left"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:gravity="center"
+                            android:text="控制1" />
+                    </LinearLayout>
 
-                            <Button
-                                android:id="@+id/button"
-                                android:layout_width="match_parent"
-                                android:layout_height="158dp"
-                                android:layout_weight="2"
-                                android:text="Fire!!!" />
+                    <LinearLayout
+                        android:id="@+id/ctrl_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/bg_ctrl">
 
-                            <ImageView
-                                android:id="@+id/imageView"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="2"
-                                rocker:srcCompat="@android:drawable/ic_delete" />
-
-                            <SeekBar
-                                android:id="@+id/seekBar"
-                                style="@style/Widget.AppCompat.SeekBar.Discrete"
-                                android:layout_width="256dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="2"
-                                android:max="9"
-                                android:progress="5"
-                                android:rotation="90"
-                                android:scrollbarSize="10dp" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
+                        <TextView
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:gravity="center"
+                            android:text="控制2" />
+                    </LinearLayout>
 
-                            <LinearLayout
-                                android:id="@+id/ctrl_1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="20dp"
-                                android:background="@drawable/bg_ctrl">
+                    <LinearLayout
+                        android:id="@+id/ctrl_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/bg_ctrl">
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:gravity="center"
-                                    android:text="控制1" />
-                            </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="控制3" />
+                    </LinearLayout>
 
-                            <LinearLayout
-                                android:id="@+id/ctrl_2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="20dp"
-                                android:background="@drawable/bg_ctrl">
+                    <LinearLayout
+                        android:id="@+id/ctrl_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/bg_ctrl">
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:gravity="center"
-                                    android:text="控制2" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/ctrl_3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="20dp"
-                                android:background="@drawable/bg_ctrl">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:gravity="center"
-                                    android:text="控制3" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/ctrl_4"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="20dp"
-                                android:background="@drawable/bg_ctrl">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:gravity="center"
-                                    android:text="控制4" />
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                        <com.gcssloop.widget.RockerView
-                            android:id="@+id/rocker"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            rocker:area_background="@drawable/area_bg"
-                            rocker:area_radius="120dp"
-                            rocker:refresh_cycle="8"
-                            rocker:rocker_background="@drawable/rocker_bg"
-                            rocker:rocker_radius="40dp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="控制4" />
                     </LinearLayout>
 
                 </LinearLayout>
-            </ScrollView>
+
+                <com.gcssloop.widget.RockerView
+                    android:id="@+id/rocker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    rocker:area_background="@drawable/area_bg"
+                    rocker:area_radius="120dp"
+                    rocker:refresh_cycle="8"
+                    rocker:rocker_background="@drawable/rocker_bg"
+                    rocker:rocker_radius="40dp" />
+            </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
